@@ -1,7 +1,9 @@
 Robotron 2000
 
 Robotron 2000 é uma aplicação web onde você pode montar um robô com atributos de sua escolha. Este projeto foi desenvolvido como parte do curso de Front-end com JavaScript da ALURA.
-Tecnologias Utilizadas
+
+
+-> Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
@@ -9,10 +11,13 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     CSS3
     JavaScript
 
-Como Executar o Projeto
+
+-> Como Executar o Projeto
 
 Para executar o projeto, basta abrir o arquivo index.html em qualquer navegador web.
-Funcionalidades
+
+
+-> Funcionalidades
 
 Com o Robotron 2000, você pode:
 
@@ -20,7 +25,8 @@ Com o Robotron 2000, você pode:
     Escolher a cor do robô
     Escolher atributos do robô
 
-Como Contribuir
+
+-> Como Contribuir
 
 Contribuições são sempre bem-vindas! Se você quiser contribuir com o projeto, siga estes passos:
 
@@ -32,6 +38,7 @@ Contribuições são sempre bem-vindas! Se você quiser contribuir com o projeto
     Envie suas alterações para o GitHub: git push origin minha-contribuicao
     Abra um pull request
 
-Licença
+
+-> Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
