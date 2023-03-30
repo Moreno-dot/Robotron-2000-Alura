@@ -58,24 +58,44 @@ function manipulaDados(operacao, controle) {
   }
 }
 
-// Atualiza as estatísticas com base na peça selecionada
-function atualizaEstatisticas(peca) {
-  console.log();
+const robots = document.querySelectorAll('.robo');
 
-  estatisticas.forEach((elemento) => {
-    elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
+let currentIndex = localStorage.getItem('currentIndex') || 0; 
+
+robots.forEach((robot) => {
+  robot.addEventListener("click", () => {
+  if (currentIndex < 7){
+   currentIndex++
+   showRobot(currentIndex)
+  }
+  else {
+    currentIndex = 0 
+    showRobot(currentIndex)
+  }
   });
+});
+
+function showRobot (currentIndex) {
+  for (i=0; i <robots.length -1; i++) {
+    if (robots[i] = robots[currentIndex]){
+      robots[currentIndex].classList.remove('hidden')
+    }
+    else {
+      robots[i].classList.add('hidden')
+    }
+}
 }
 
-const images = ['./img/Robos/robot1.png', './img/Robos/robot2.png', './img/Robos/robot3.png', './img/Robos/robot4.png', './img/Robos/robot5.png', './img/Robos/robot6.png',];
-let currentIndex = localStorage.getItem('currentIndex') || 0;
 
-const robotImage = document.getElementById('robot');
-robotImage.addEventListener('click', function() {
-    currentIndex++;
-    if(currentIndex >= images.length){
-      currentIndex = 0;
-    }
-    robotImage.src = images[currentIndex];
+
+
+
+
+// robotImage.addEventListener('click', function() {
+//     currentIndex++;
+//     if(currentIndex >= images.length){
+//       currentIndex = 0;
+//     }
+//     robotImage.src = images[currentIndex];
     
-});
+// });
