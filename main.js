@@ -58,44 +58,24 @@ function manipulaDados(operacao, controle) {
   }
 }
 
-const robots = document.querySelectorAll('.robo');
+// Atualiza as estatísticas com base na peça selecionada
+function atualizaEstatisticas(peca) {
+  console.log();
 
-let currentIndex = localStorage.getItem('currentIndex') || 0; 
-
-robots.forEach((robot) => {
-  robot.addEventListener("click", () => {
-  if (currentIndex < 7){
-   currentIndex++
-   showRobot(currentIndex)
-  }
-  else {
-    currentIndex = 0 
-    showRobot(currentIndex)
-  }
+  estatisticas.forEach((elemento) => {
+    elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
   });
-});
-
-function showRobot (currentIndex) {
-  for (i=0; i <robots.length -1; i++) {
-    if (robots[i] = robots[currentIndex]){
-      robots[currentIndex].classList.remove('hidden')
-    }
-    else {
-      robots[i].classList.add('hidden')
-    }
-}
 }
 
+  const images = ['./img/Robos/robot1.png', './img/Robos/robot2.png', './img/Robos/robot3.png', './img/Robos/robot4.png', './img/Robos/robot5.png', './img/Robos/robot6.png',];
+  const robotImage = document.getElementById('robot');
+  currentIndex = 0;
 
-
-
-
-
-// robotImage.addEventListener('click', function() {
-//     currentIndex++;
-//     if(currentIndex >= images.length){
-//       currentIndex = 0;
-//     }
-//     robotImage.src = images[currentIndex];
-    
-// });
+robotImage.addEventListener('click', function() {
+    currentIndex++;
+    if(currentIndex >= images.length){
+      currentIndex = 0;
+    }
+   
+    robotImage.src = images[currentIndex];
+}); 

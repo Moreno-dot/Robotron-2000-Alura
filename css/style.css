@@ -36,16 +36,13 @@ main {
     flex-basis: 40%;
     position: relative;
 }
+
 .robo {
     height: 110%;
     z-index: 1;
     position: absolute;
     left: -20%;
     top: -5%;
-}
-
-.hidden {
-    display: none;
 }
 
 .titulo {
